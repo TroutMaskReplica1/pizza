@@ -1,15 +1,14 @@
 function Pizza(size, meat, veggie) {
   this.size = size;
-  this.meat = meat;
-  this.veggie = veggie;
+  this.topping = [];
+  this.price = 0;
 }
 
 Pizza.prototype.toppingPrice = function() {
   var size = $("#size").val();
-  var topArray = [];
-  topArray.push(this.meat, this.veggie);
+  topArray.push(this.topping);
   if (size === "small") {
-    for (i=0; i >= topArray.length; i++) {
+    for (i=0; i >= this.meat.length; i++) {
       return console.log(0.5);
     }
      alert("1");
@@ -35,9 +34,8 @@ $(document).ready(function() {
   $("#pizza").submit(function() {
     event.preventDefault();
     var size = $("#size").val();
-    var meatInput = $("#meat:checked").val();
-    var veggieInput = $("input[type=checkbox]:checked").val();
-    $(".display").text("You ordered a " + piz.meat + " " + piz.veggie + " pizza");
+    var meat = $("input[name=topping]:checked").val();
+    $(".display").text("You ordered a " + piz.topping + " pizza");
     $("#price").text("That will be " + piz.toppingPrice());
   });
 });
