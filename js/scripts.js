@@ -6,29 +6,37 @@ function Pizza(size, meat, veggie) {
 
 Pizza.prototype.toppingPrice = function() {
   var size = $("#size").val();
+  var topArray = [];
+  topArray.push(this.meat, this.veggie);
   if (size === "small") {
-    for (i=0; i > toppings.length; i++)
-    return 0.5;
+    for (i=0; i >= topArray.length; i++) {
+      return console.log(0.5);
+    }
+     alert([i]);
   } else if (size === "medium") {
-    for (i=0; i > toppings.length; i++)
-    return 1;
+    for (i=0; i >= topArray.length; i++) {
+      return console.log(1);
+    }
+     alert("2");
   } else if (size === "large") {
-    for (i=0; i > toppings.length; i++)
-    return 1.5;
+    for (i=0; i >= topArray.length; i++) {
+      return console.log(1.5);
+    }
+     alert("3");
+  } else {
+     alert("not working");
   }
 }
 
 var piz = new Pizza("small", "pepperoni", "olive");
 
 
-// $(document).ready(function() {
-//   $("#sub").click(function() {
-//     var size = $("#size").val();
-//     var meatInput = $("#meat:checked").val();
-//     var veggieInput = $("input[type=checkbox]:checked").val();
-//     var meat = [];
-//     var veggie = []
-//     $(".display").text("You ordered a "  + size + " " + meat + " " + veggie );
-//     event.preventDefault();
-//   });
-// });
+$(document).ready(function() {
+  $("#sub").click(function() {
+    event.preventDefault();
+    var size = $("#size").val();
+    var meatInput = $("#meat:checked").val();
+    var veggieInput = $("input[type=checkbox]:checked").val();
+    $(".display").text("You ordered a " + piz.toppingPrice());
+  });
+});
