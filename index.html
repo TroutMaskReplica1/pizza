@@ -14,31 +14,33 @@
     <form id="pizza" action="index.html" method="post">
       <h4>Size</h4>
       <select class="form-control" id="size">
-        <option value="s">Small</option>
-        <option value="m">Medium</option>
-        <option value="l">Large</option>
+        <option type="checkbox" value="s">Small</option>
+        <option type="checkbox" value="m">Medium</option>
+        <option type="checkbox" value="l">Large</option>
       </select>
 
       <br>
 
       <h4>Choose MEat</h4>
-      <select class="form-control" id="meat">
-        <option value="pep">Pepperoni</option>
-        <option value="saug">Sausage</option>
-        <option value="cb">Canadian Bacon</option>
-      </select>
+      <div class="form-control" id="meat">
+        <input type="checkbox" value="pep">Pepperoni</input>
+        <input type="checkbox" value="saug">Sausage</input>
+        <input type="checkbox" value="cb">Canadian Bacon</input>
+        <input type="checkbox" value="none">None</input>
+      </div>
 
       <br>
 
       <h4>Choose Vegger</h4>
-      <select class="form-control" id="veggie">
-        <option value="pep">Mushroom</option>
-        <option value="saug">Black Olive</option>
-        <option value="cb">Spinach</option>
-        <option value="cb">Tomato</option>
-        <option value="cb">Feta</option>
-        <option value="cb">Pinappe</option>
-      </select>
+      <div class="form-control" id="veggie">
+        <input type="checkbox" value="mush">Mushroom</input>
+        <input type="checkbox" value="olive">Black Olive</input>
+        <input type="checkbox" value="spin">Spinach</input>
+        <input type="checkbox" value="tom">Tomato</input>
+        <input type="checkbox" value="feta">Feta</input>
+        <input type="checkbox" value="pin">Pinappe</input>
+        <input type="checkbox" value="none">None</input>
+      </div>
       <button type="submit" name="btn btn-success">Order Pizaz</button>
   </form>
   </body>
