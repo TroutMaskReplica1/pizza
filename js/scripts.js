@@ -12,7 +12,7 @@ Pizza.prototype.toppingPrice = function() {
     for (i=0; i >= topArray.length; i++) {
       return console.log(0.5);
     }
-     alert([i]);
+     alert("1");
   } else if (size === "medium") {
     for (i=0; i >= topArray.length; i++) {
       return console.log(1);
@@ -28,15 +28,16 @@ Pizza.prototype.toppingPrice = function() {
   }
 }
 
-var piz = new Pizza("small", "pepperoni", "olive");
+var piz = new Pizza("small", "human", "bell pepper");
 
 
 $(document).ready(function() {
-  $("#sub").click(function() {
+  $("#pizza").submit(function() {
     event.preventDefault();
     var size = $("#size").val();
     var meatInput = $("#meat:checked").val();
     var veggieInput = $("input[type=checkbox]:checked").val();
-    $(".display").text("You ordered a " + piz.toppingPrice());
+    $(".display").text("You ordered a " + piz.meat + " " + piz.veggie + " pizza");
+    $("#price").text("That will be " + piz.toppingPrice());
   });
 });
