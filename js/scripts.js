@@ -4,38 +4,34 @@ function Pizza(size, meat, veggie) {
   this.price = 0;
 }
 
-Pizza.prototype.toppingPrice = function() {
+Pizza.prototype.sizePrice = function() {
   var size = $("#size").val();
-  topArray.push(this.topping);
   if (size === "small") {
-    for (i=0; i >= this.meat.length; i++) {
-      return console.log(0.5);
-    }
-     alert("1");
+    return 5;
   } else if (size === "medium") {
-    for (i=0; i >= topArray.length; i++) {
-      return console.log(1);
-    }
-     alert("2");
+    return 7;
   } else if (size === "large") {
-    for (i=0; i >= topArray.length; i++) {
-      return console.log(1.5);
-    }
-     alert("3");
-  } else {
-     alert("not working");
+    return 9;
   }
 }
 
-var piz = new Pizza("small", "human", "bell pepper");
+Pizza.prototype.toppingPrice = function() {
+  for (i=0; i<this.topping.length; i++)
+      this.price + 1;
+    }
 
+var piz = new Pizza();
 
 $(document).ready(function() {
   $("#pizza").submit(function() {
     event.preventDefault();
     var size = $("#size").val();
-    var meat = $("input[name=topping]:checked").val();
+    var topping = $("input[name=topping]:checked").val();
+    function topPush() {
+      piz.topping.push(this).value;
+    }
+    topPush(topping);
     $(".display").text("You ordered a " + piz.topping + " pizza");
-    $("#price").text("That will be " + piz.toppingPrice());
+    $("#price").text("That will be $" + piz.sizePrice() + piz.toppingPrice());
   });
 });
