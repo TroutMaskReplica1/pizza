@@ -9,28 +9,37 @@
     <title></title>
   </head>
   <body>
-    <h1>Hey there, how ya doin?</h1>
-    <h3>Welcome to my humble Pizza Parlor.</h3>
-    <select class="form-control" id="size">
-      <option value="s">Small</option>
-      <option value="m">Medium</option>
-      <option value="l">Large</option>
-    </select>
-    <select class="form-control" id="size">
-      <option value="pep">Pepperoni</option>
-      <option value="saug">Sausage</option>
-      <option value="cb">Canadian Bacon</option>
-    </select>
+    <h2 class="jumbotron">Welcome to my humble Pizza Parlor.</h2>
+    <br>
+    <form id="pizza" action="index.html" method="post">
+      <h4>Size</h4>
+      <select class="form-control" id="size">
+        <option value="s">Small</option>
+        <option value="m">Medium</option>
+        <option value="l">Large</option>
+      </select>
+
+      <br>
+
+      <h4>Choose MEat</h4>
+      <select class="form-control" id="meat">
+        <option value="pep">Pepperoni</option>
+        <option value="saug">Sausage</option>
+        <option value="cb">Canadian Bacon</option>
+      </select>
+
+      <br>
+
+      <h4>Choose Vegger</h4>
+      <select class="form-control" id="veggie">
+        <option value="pep">Mushroom</option>
+        <option value="saug">Black Olive</option>
+        <option value="cb">Spinach</option>
+        <option value="cb">Tomato</option>
+        <option value="cb">Feta</option>
+        <option value="cb">Pinappe</option>
+      </select>
+      <button type="submit" name="btn btn-success">Order Pizaz</button>
+  </form>
   </body>
 </html>
-<br>
-<br>
-<br>
-input: 1 small cheese             toppings for small = $0.50 each
-output: $5.00
-
-input: 1 medium cheese            toppings for medium = $1.00 each
-output: $7.00
-
-input: 1 large cheese             toppings for large = $1.50 each
-output: $9.00
