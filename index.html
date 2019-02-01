@@ -14,9 +14,9 @@
     <form id="pizza" action="index.html" method="post">
       <h4>Size</h4>
       <select class="form-control" id="size">
-        <option type="checkbox" value="s">Small</option>
-        <option type="checkbox" value="m">Medium</option>
-        <option type="checkbox" value="l">Large</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
       </select>
 
       <br>
@@ -41,7 +41,10 @@
         <input type="checkbox" value="pin">Pinappe</input>
         <input type="checkbox" value="none">None</input>
       </div>
-      <button type="submit" name="btn btn-success">Order Pizaz</button>
+      <button type="submit" id="sub" class="btn btn-danger">Order Pizaz</button>
   </form>
+  <div class="display">
+
+  </div>
   </body>
 </html>
