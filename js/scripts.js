@@ -28,10 +28,10 @@ $(document).ready(function() {
     var size = $("#size").val();
     var topping = $("input[name=topping]:checked").val();
     function topPush() {
-      piz.topping.push(this).value;
+      return piz.topping.push(this).value;
     }
-    topPush(topping);
+    topPush(piz.topping);
     $(".display").text("You ordered a " + piz.topping + " pizza");
-    $("#price").text("That will be $" + piz.sizePrice() + piz.toppingPrice());
+    $("#price").text("That will be $" + piz.sizePrice() );
   });
 });
